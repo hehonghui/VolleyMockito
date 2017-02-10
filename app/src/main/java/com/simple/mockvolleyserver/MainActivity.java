@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mTextView = (TextView) findViewById(R.id.log_tv);
-        mQueue = VolleyQueue.create(getApplicationContext());
-
+        mQueue = VolleyQueue.create(getApplicationContext(), BuildConfig.DEBUG);
 
         mHandler.postDelayed(new Runnable() {
             @Override
